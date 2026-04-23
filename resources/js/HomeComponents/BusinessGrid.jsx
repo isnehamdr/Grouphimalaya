@@ -309,9 +309,9 @@ import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import automobile from '../../../public/images/automobile_banner.jpg'
-import realestate from '../../../public/images/realestate.avif'
+import realestate from '../../../public/images/building.jpeg'
 import banking from '../../../public/images/banking.avif'
-import agriculture from '../../../public/images/agriculture.avif'
+import agriculture from '../../../public/images/agriculture.png'
 import { router } from '@inertiajs/react'
 
 gsap.registerPlugin(ScrollTrigger)

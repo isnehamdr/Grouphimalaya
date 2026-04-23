@@ -10,12 +10,13 @@ import Stats from '@/HomeComponents/Stats'
 import BrandStrip from '@/HomeComponents/BrandStrip'
 import AutomotiveShowcase from '@/HomeComponents/AutomotiveShowcase'
 import ChairmanTeaser from '@/HomeComponents/ChairmanTeaser'
-import LatestUpdates from '@/HomeComponents/LatestUpdates'
+// import LatestUpdates from '@/HomeComponents/LatestUpdates'
 import VisionMission from '@/HomeComponents/VisionMission'
 import CareersCTA from '@/HomeComponents/CareersCTA'
 import ContactStrip from '@/HomeComponents/ContactStrip'
 import Subhero from '@/HomeComponents/Subhero'
 import SEO from '@/Components/SEO'
+import LaunchingSoon from '@/HomeComponents/LaunchingSoon'
 
 const HomePage = ({ url }) => {
   return (
@@ -36,9 +37,10 @@ const HomePage = ({ url }) => {
         <BusinessGrid/>
         <AutomotiveShowcase/>
         <Business/>
+        <LaunchingSoon/>
         <ChairmanTeaser/>
         <GrowthJourney/>
-        <LatestUpdates/>
+        {/* <LatestUpdates/> */}
         <VisionMission/>
         <CareersCTA/>
         <ContactStrip/>

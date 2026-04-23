@@ -241,7 +241,7 @@
 
 import React, { useRef, useEffect } from 'react'
 import MainWrapper from '@/MainComponents/MainWrapper'
-import realestateimage from '../../../public/images/realestate.avif'
+import realestateimage from '../../../public/images/building.jpeg'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import BusinessServicesCards from '@/MainComponents/BusinessServicesCards'

@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import vehicleImg from '../../../public/images/automobile_banner.jpg'
-import dealerImg from '../../../public/images/h5.webp'
+import dealerImg from '../../../public/images/Forceservice1.jpeg'
 import serviceImg from '../../../public/images/automotive3.jpg'
 import { router } from '@inertiajs/react'
 
@@ -15,12 +15,12 @@ const items = [
   {
     title: 'Dealership Network',
     body: '22+ nationwide dealer touchpoints with consistent after-sales support and availability.',
-    image: dealerImg,
+    image:serviceImg,
   },
   {
     title: 'Service and Parts',
     body: 'Certified servicing, genuine parts, diagnostics, and warranty-backed maintenance.',
-    image: serviceImg,
+    image: dealerImg,
   },
 ]
 

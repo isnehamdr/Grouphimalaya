@@ -238,6 +238,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import OrganizationTimeline from '@/MainComponents/OrganizationTimeline'
 import Faq from '@/HomeComponents/Faq'
 import SEO from '@/Components/SEO'
+import historyimage from '../../../public/images/organization_history_update.jpeg'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -245,6 +246,14 @@ const OrganizationHistory = () => {
   const textRef = useRef(null)
   const headingRef = useRef(null)
   const cardsRef = useRef([])
+  const historyImageRef = useRef(null)
+const historyOverlayRef = useRef(null)
+const historyTextRef = useRef(null)
+const historyLineRef = useRef(null)
+
+
+
+
 
   // SEO data with consistent history and timeline keywords
   const seoData = {
@@ -368,6 +377,54 @@ const OrganizationHistory = () => {
     }
   }, [])
 
+
+useEffect(() => {
+  const textEl = historyTextRef.current
+  const imageEl = historyImageRef.current
+  const line = historyLineRef.current
+  if (!textEl || !imageEl || !line) return
+
+  // Entrance animations
+  gsap.fromTo(line,
+    { scaleX: 0, transformOrigin: 'left center' },
+    {
+      scaleX: 1, duration: 0.7, ease: 'power2.inOut',
+      scrollTrigger: { trigger: textEl, start: 'top 82%', toggleActions: 'play reverse play reverse' }
+    }
+  )
+
+  gsap.fromTo(textEl,
+    { opacity: 0, x: -40 },
+    {
+      opacity: 1, x: 0, duration: 0.9, ease: 'power3.out',
+      scrollTrigger: { trigger: textEl, start: 'top 82%', toggleActions: 'play reverse play reverse' }
+    }
+  )
+
+  gsap.fromTo(imageEl,
+    { opacity: 0, x: 50 },
+    {
+      opacity: 1, x: 0, duration: 0.9, delay: 0.2, ease: 'power3.out',
+      scrollTrigger: { trigger: textEl, start: 'top 82%', toggleActions: 'play reverse play reverse' }
+    }
+  )
+
+  // Pin text on desktop only
+  const mm = gsap.matchMedia()
+  mm.add('(min-width: 1024px)', () => {
+    ScrollTrigger.create({
+      trigger: textEl,
+      endTrigger: imageEl,
+      start: 'top 96px',
+      end: 'bottom bottom',
+      pin: true,
+      pinSpacing: false,
+    })
+  })
+
+  return () => mm.revert()
+}, [])
+
   return (
     <MainWrapper>
       <SEO {...seoData} />
@@ -400,6 +457,41 @@ const OrganizationHistory = () => {
           </p>
         </div>
 
+ {/* History Image Section */}
+<div className='my-10 sm:my-16 lg:my-24 px-2 sm:px-10 lg:px-20'>
+  <div className='flex flex-col lg:flex-row gap-6 lg:gap-12 items-start'>
+
+    {/* Left — Text (pinned on desktop) */}
+    <div
+      ref={historyTextRef}
+      className='flex flex-col gap-4 lg:gap-6 lg:w-2/5 w-full'
+    >
+      <div ref={historyLineRef} className='h-[2px] w-16 bg-[#ae8755]' />
+      <p className='text-[#ae8755] text-sm font-medium tracking-widest uppercase'>
+        Where It All Began
+      </p>
+      <h2 className='text-white text-2xl sm:text-3xl lg:text-4xl font-semibold leading-snug'>
+        The first store. The first deal. The foundation of everything that followed.
+      </h2>
+      <p className='text-gray-400 text-base sm:text-lg leading-relaxed'>
+        Before the conglomerate, before the nationwide presence — there was one small shop in Pokhara, a bold idea, and the unwavering resolve of a founder who saw potential where others saw risk.
+      </p>
+    </div>
+
+    {/* Right — Full Image */}
+    <div
+      ref={historyImageRef}
+      className='lg:w-3/5 w-full'
+    >
+      <img
+        src={historyimage.src || historyimage}
+        alt='Himalaya Organization — The beginning'
+        className='w-full h-auto rounded-2xl object-contain'
+      />
+    </div>
+
+  </div>
+</div>
         <OrganizationTimeline />
 
         <div className='text-center lg:px-20 lg:pb-16 flex flex-col lg:gap-8 gap-4'>

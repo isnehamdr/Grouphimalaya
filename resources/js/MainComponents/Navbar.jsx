@@ -149,7 +149,7 @@
 //                 font-medium
 //               ">
 //             <span className="relative z-10">
-//               Contact Us
+//               Contact
 //             </span>
 
 //             <span className="absolute inset-0 overflow-hidden rounded-md">
@@ -265,7 +265,7 @@
 
 //         <div className="px-4 pb-6 pt-3 border-t border-white/10">
 //           <button onClick={()=>router.visit('/contact')} className="group relative w-full h-11 overflow-hidden rounded-full bg-[#b08d57] text-black text-sm font-medium">
-//             <span className="relative z-10">Contact Us</span>
+//             <span className="relative z-10">Contact</span>
 //             <span className="absolute inset-0 overflow-hidden rounded-full">
 //               <span className="absolute left-0 aspect-square w-full origin-center -translate-x-full rounded-full bg-white/30 transition-all duration-500 group-hover:-translate-x-0 group-hover:scale-150" />
 //             </span>
@@ -301,8 +301,6 @@
 // )
 
 // export default Navbar
-
-
 
 
 
@@ -369,30 +367,38 @@ const Navbar = () => {
           className={`
             transition-all duration-200 ease-out
             ${isPill
-              ? 'mx-4 sm:mx-8 md:mx-16 lg:mx-72 2xl:mx-[300px] mt-4 rounded-full bg-[#0e1116]/90 backdrop-blur-md border border-white/10 shadow-sm px-2'
-              : 'mx-0 mt-0 rounded-none bg-[#0e1116] border-b border-white/10 px-2 lg:px-8'
+              ? 'mx-4 sm:mx-8 md:mx-16 lg:mx-24 xl:mx-32 mt-4 rounded-full bg-[#0e1116]/90 backdrop-blur-md border border-white/10 shadow-sm px-4'
+              : 'mx-0 mt-0 rounded-none bg-[#0e1116] border-b border-white/10 px-4 lg:px-8'
             }
           `}
         >
-          <div className={`flex items-center py-2 gap-4 ${!isPill ? 'max-w-7xl mx-auto justify-between' : 'justify-between'}`}>
+          {/* Flex on mobile (logo left, hamburger right), 3-col grid on desktop */}
+          <div className={`flex md:grid md:grid-cols-3 items-center justify-between py-2 ${!isPill ? 'max-w-7xl mx-auto' : ''}`}>
 
-            {/* CRS Text Logo */}
-            {/* <Link href="/" className="shrink-0 text-[#b08c57] text-base uppercase font-extrabold tracking-widest text-center lg:pl-4">
-              Himalaya 
-              <br/>
-              Organization
-            </Link> */}
+            {/* LEFT — Logo */}
+            <div className="flex items-center justify-start">
+              <Link href="/" className="flex-shrink-0 flex items-center -my-4">
+                <img
+                  src="/images/logo2.png"
+                  alt="Logo"
+                  className="h-16 sm:h-20 md:h-24 w-auto object-contain"
+                />
+              </Link>
+            </div>
 
-            {/* Desktop Nav Links */}
-            <div className="hidden md:flex items-center gap-1 lg:gap-2">
-              <Link href="/" className={`px-3 py-2 text-base font-medium ${url === '/' ? 'text-[#d6c3a0]' : 'text-white/80'} hover:text-white rounded-full hover:bg-white/5 transition-all duration-150`}>
+            {/* CENTER — Desktop Nav Links */}
+            <div className="hidden md:flex items-center justify-center gap-0.5 lg:gap-1">
+              <Link
+                href="/"
+                className={`px-3 py-2 text-sm lg:text-base font-medium rounded-full hover:bg-white/5 transition-all duration-150 ${url === '/' ? 'text-[#d6c3a0]' : 'text-white/80 hover:text-white'}`}
+              >
                 Home
               </Link>
 
               <div className="relative" ref={aboutRef}>
                 <button
                   onClick={() => { setAboutOpen(p => !p); setBusinessOpen(false) }}
-                  className={`flex items-center gap-1 px-3 py-2 text-base font-medium ${isAboutActive ? 'text-[#d6c3a0]' : 'text-white/80'} hover:text-white rounded-full hover:bg-white/5 transition-all duration-150`}
+                  className={`flex items-center gap-1 px-3 py-2 text-sm lg:text-base font-medium rounded-full hover:bg-white/5 transition-all duration-150 ${isAboutActive ? 'text-[#d6c3a0]' : 'text-white/80 hover:text-white'}`}
                 >
                   About
                   <svg className={`w-3.5 h-3.5 transition-transform duration-200 ${aboutOpen ? 'rotate-180' : ''}`} viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
@@ -405,7 +411,7 @@ const Navbar = () => {
               <div className="relative" ref={businessRef}>
                 <button
                   onClick={() => { setBusinessOpen(p => !p); setAboutOpen(false) }}
-                  className={`flex items-center gap-1 px-3 py-2 text-base font-medium ${isBusinessActive ? 'text-[#d6c3a0]' : 'text-white/80'} hover:text-white rounded-full hover:bg-white/5 transition-all duration-150`}
+                  className={`flex items-center gap-1 px-3 py-2 text-sm lg:text-base font-medium rounded-full hover:bg-white/5 transition-all duration-150 ${isBusinessActive ? 'text-[#d6c3a0]' : 'text-white/80 hover:text-white'}`}
                 >
                   Business
                   <svg className={`w-3.5 h-3.5 transition-transform duration-200 ${businessOpen ? 'rotate-180' : ''}`} viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
@@ -414,17 +420,32 @@ const Navbar = () => {
                 </button>
                 <DropdownMenu open={businessOpen} items={businessItems} onClose={() => setBusinessOpen(false)} />
               </div>
-<Link href="/community" className={`px-3 py-2 text-base font-medium ${url === '/community' ? 'text-[#d6c3a0]' : 'text-white/80'} hover:text-white rounded-full hover:bg-white/5 transition-all duration-150`}>
+
+              <Link href="/blog" className={`px-3 py-2 text-sm lg:text-base font-medium rounded-full hover:bg-white/5 transition-all duration-150 ${url === '/blog' ? 'text-[#d6c3a0]' : 'text-white/80 hover:text-white'}`}>
+                Blog
+              </Link>
+              <Link href="/career" className={`px-3 py-2 text-sm lg:text-base font-medium rounded-full hover:bg-white/5 transition-all duration-150 ${url === '/career' ? 'text-[#d6c3a0]' : 'text-white/80 hover:text-white'}`}>
+                Career
+              </Link>
+              <Link href="/community" className={`px-3 py-2 text-sm lg:text-base font-medium rounded-full hover:bg-white/5 transition-all duration-150 ${url === '/community' ? 'text-[#d6c3a0]' : 'text-white/80 hover:text-white'}`}>
                 Community
               </Link>
-              <Link href="/blog" className={`px-3 py-2 text-base font-medium ${url === '/blog' ? 'text-[#d6c3a0]' : 'text-white/80'} hover:text-white rounded-full hover:bg-white/5 transition-all duration-150`}>Blog</Link>
-              <Link href="/career" className={`px-3 py-2 text-base font-medium ${url === '/career' ? 'text-[#d6c3a0]' : 'text-white/80'} hover:text-white rounded-full hover:bg-white/5 transition-all duration-150`}>Career</Link>
-                            <Link href="/contact" className={`px-3 py-2 text-base font-medium ${url === '/contact' ? 'text-[#d6c3a0]' : 'text-white/80'} hover:text-white rounded-full hover:bg-white/5 transition-all duration-150`}>Contact</Link>
-
             </div>
 
-              <div>
-                <button
+            {/* RIGHT — Contact Button (desktop) + Hamburger (mobile) */}
+            <div className="flex items-center justify-end gap-3">
+              <button
+                onClick={() => router.visit('/contact')}
+                className="hidden md:block group relative h-10 lg:h-11 px-5 lg:px-7 overflow-hidden rounded-full bg-[#b08d57] text-black text-sm lg:text-base font-medium flex-shrink-0"
+              >
+                <span className="relative z-10">Contact</span>
+                <span className="absolute inset-0 overflow-hidden rounded-full">
+                  <span className="absolute left-0 aspect-square w-full origin-center -translate-x-full rounded-full bg-white/30 transition-all duration-500 group-hover:-translate-x-0 group-hover:scale-150" />
+                </span>
+              </button>
+
+              {/* Hamburger — mobile only, RIGHT side */}
+              <button
                 onClick={() => setMobileOpen(p => !p)}
                 className="md:hidden flex flex-col justify-center items-center w-9 h-9 rounded-full hover:bg-white/5 transition-colors gap-1.5"
                 aria-label="Toggle menu"
@@ -433,20 +454,8 @@ const Navbar = () => {
                 <span className={`block h-0.5 w-5 bg-white rounded transition-all duration-300 ${mobileOpen ? 'opacity-0' : ''}`} />
                 <span className={`block h-0.5 w-5 bg-white rounded transition-all duration-300 ${mobileOpen ? '-rotate-45 -translate-y-2' : ''}`} />
               </button>
-              </div>
-            {/* Contact + Hamburger */}
-            <div className="flex items-center  gap-2">
-              <button onClick={() => router.visit('/community')}
-                className="group relative h-11 sm:h-12 px-6 sm:px-8 overflow-hidden rounded-full bg-[#b08d57] text-black text-sm sm:text-base font-medium"
-              >
-                <span className="relative z-10">CSR</span>
-                <span className="absolute inset-0 overflow-hidden rounded-md">
-                  <span className="absolute left-0 aspect-square w-full origin-center -translate-x-full rounded-full bg-white/30 transition-all duration-500 group-hover:-translate-x-0 group-hover:scale-150" />
-                </span>
-              </button>
-
-              
             </div>
+
           </div>
         </div>
       </nav>
@@ -463,8 +472,6 @@ const Navbar = () => {
         className={`fixed top-0 right-0 h-full w-72 z-50 md:hidden bg-[#0e1116] shadow-2xl flex flex-col transition-transform duration-300 ease-in-out ${mobileOpen ? 'translate-x-0' : 'translate-x-full'}`}
       >
         <div className="flex items-center justify-between px-5 pt-5 pb-4 border-b border-white/10">
-          {/* CRS Text Logo in drawer */}
-          {/* <span className="text-[#d6c3a0] text-xl font-bold tracking-widest">CRS</span> */}
           <button
             onClick={() => setMobileOpen(false)}
             className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/5 text-white/70 transition-colors ml-auto"
@@ -513,16 +520,15 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          <Link href="/community" className="px-4 py-3 rounded-xl text-sm font-medium text-white hover:bg-white/5 transition-colors" onClick={() => setMobileOpen(false)}>Community</Link>
+
           <Link href="/blog" className="px-4 py-3 rounded-xl text-sm font-medium text-white hover:bg-white/5 transition-colors" onClick={() => setMobileOpen(false)}>Blog</Link>
           <Link href="/career" className="px-4 py-3 rounded-xl text-sm font-medium text-white hover:bg-white/5 transition-colors" onClick={() => setMobileOpen(false)}>Career</Link>
-                    <Link href="/contact" className="px-4 py-3 rounded-xl text-sm font-medium text-white hover:bg-white/5 transition-colors" onClick={() => setMobileOpen(false)}>Contact </Link>
-
+          <Link href="/community" className="px-4 py-3 rounded-xl text-sm font-medium text-white hover:bg-white/5 transition-colors" onClick={() => setMobileOpen(false)}>Community</Link>
         </div>
 
         <div className="px-4 pb-6 pt-3 border-t border-white/10">
-          <button onClick={() => router.visit('/community')} className="group relative w-full h-11 overflow-hidden rounded-full bg-[#b08d57] text-black text-sm font-medium">
-            <span className="relative z-10">CSR</span>
+          <button onClick={() => { router.visit('/contact'); setMobileOpen(false) }} className="group relative w-full h-11 overflow-hidden rounded-full bg-[#b08d57] text-black text-sm font-medium">
+            <span className="relative z-10">Contact</span>
             <span className="absolute inset-0 overflow-hidden rounded-full">
               <span className="absolute left-0 aspect-square w-full origin-center -translate-x-full rounded-full bg-white/30 transition-all duration-500 group-hover:-translate-x-0 group-hover:scale-150" />
             </span>

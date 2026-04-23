@@ -10,7 +10,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { SplitText } from 'gsap/SplitText'
 import { router } from '@inertiajs/react'
-import himalayalogo from '../../../public/images/logo2.png'
+import himalayalogo from '../../../public/images/logobgremoved.png'
 
 gsap.registerPlugin(ScrollTrigger, SplitText)
 
