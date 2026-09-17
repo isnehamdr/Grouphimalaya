@@ -258,6 +258,9 @@
 
 // export default Automobile
 // Automobile.jsx
+
+
+
 import React, { useRef, useEffect } from 'react'
 import MainWrapper from '@/MainComponents/MainWrapper'
 import automobileimage from '../../../public/images/automobile_banner.jpg'
@@ -278,6 +281,7 @@ import forceserviceShowroomImgfive from '../../../public/images/Forceservice5.jp
 import maxusShowroomImg from '../../../public/images/maxusshowroom.jpg'
 import deepalShowroomImg from '../../../public/images/deepalshowroom.jpg'
 import fordShowroomImg from '../../../public/images/fordshowroom.jpg'
+import dongfengCoverImg from '../../../public/images/dong2.jpeg'
 import SEO from '@/Components/SEO'
 
 const services = [
@@ -493,6 +497,7 @@ const Automobile = () => {
             force: forceShowroomImg,
             'force-service': [forceserviceShowroomImg,forceserviceShowroomImgTwo, forceserviceShowroomImgThree, forceserviceShowroomImgfour, forceserviceShowroomImgfive],
             maxus: maxusShowroomImg,
+             dongfeng: dongfengCoverImg,
             deepal: deepalShowroomImg,
             ford: fordShowroomImg,
           }}

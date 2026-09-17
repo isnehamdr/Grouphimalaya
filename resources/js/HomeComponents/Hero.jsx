@@ -308,7 +308,7 @@ split.words.forEach((word) => {
 </h1>
 
           <div>
-            <img src={himalayalogo} className='w-64 mx-auto'/>
+            <img src={himalayalogo} className='w-24 lg:w-36 mx-auto' alt='Company Logo'/>
           </div>
 
 

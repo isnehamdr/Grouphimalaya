@@ -449,7 +449,7 @@ useEffect(() => {
             ref={textRef}
             className='w-full max-w-5xl text-xl sm:text-2xl lg:text-3xl font-medium leading-relaxed break-words'
           >
-            In 1991, under the leadership of Founder and Chairman Mr. Dhurba Bahadur Thapa, Himalaya Organization launched as Nepal's first reconditioned vehicle house and bike rental firm in Western Nepal.
+            In 1991, under the leadership of Founder and Chairman Mr. Dhruba Thapa, Himalaya Organization launched as Nepal's first reconditioned vehicle house and bike rental firm in Western Nepal.
 
             This bold entry into the auto sector — focusing on buy/sell/exchange of pre owned two wheelers — laid the foundation for expansion amid economic challenges that would have deterred lesser visionaries.
 

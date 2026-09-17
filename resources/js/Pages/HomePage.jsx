@@ -17,18 +17,21 @@ import ContactStrip from '@/HomeComponents/ContactStrip'
 import Subhero from '@/HomeComponents/Subhero'
 import SEO from '@/Components/SEO'
 import LaunchingSoon from '@/HomeComponents/LaunchingSoon'
-
+import himalayanlogo from '../../../public/images/logo2.png'
+import NewsArticle from '@/HomeComponents/NewsArticle'
+import Test from '@/HomeComponents/Test'
 const HomePage = ({ url }) => {
   return (
     <MainWrapper>
 
       <SEO
-        title="Automobile, Real Estate, Banking & Engineering in Nepal"
+        title="Himalaya Organization - Official Website | Leading Business Conglomerate"
         description="Himalaya Organization is a leading business group in Nepal offering services in automobile, real estate, banking, agriculture, and engineering sectors."
         url={url}
       />
 
       <div className='bg-[#0b0c0f]'>
+        
         <Hero/>
         <Subhero/>
         <Stats/>
@@ -40,15 +43,21 @@ const HomePage = ({ url }) => {
         <LaunchingSoon/>
         <ChairmanTeaser/>
         <GrowthJourney/>
-        {/* <LatestUpdates/> */}
+        
         <VisionMission/>
         <CareersCTA/>
         <ContactStrip/>
+        <NewsArticle/>
         <Faq/>
       </div>
+
+     
 
     </MainWrapper>
   )
 }
 
 export default HomePage
+
+
+

@@ -296,7 +296,7 @@ const Engineering = () => {
 
   // SEO data with consistent engineering keywords
   const seoData = {
-    title: "Engineering & Construction | Civil, Mechanical & Electrical Services in Nepal | Himalaya Organization",
+    title: "Engineering & Construction | Himalaya Organization",
     description: "Himalaya Organization's Engineering Division provides civil construction, mechanical & electrical engineering, structural fabrication, machinery maintenance, industrial setup, and engineering consulting services in Nepal. Precision engineering excellence since 1991.",
     url: "https://www.himalayaorganization.com/engineering",
     image: "/images/engineering.avif",

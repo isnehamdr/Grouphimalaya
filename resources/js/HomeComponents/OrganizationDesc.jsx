@@ -9,10 +9,12 @@ gsap.registerPlugin(ScrollTrigger)
 const sectors = [
   {name:'Automotive', link:'/automobile'},
   {name:'Real Estate & Housing', link:'/realestate'},
+  {name:'Dongfeng Yunnan', link:'/dongfengyunnan'},
   {name:'Hospitality', link:'/hospitality'},
   {name:'Engineering', link:'/engineering'},
   {name:'Banking', link:'/banking'},
   {name:'Agriculture', link:'/agriculture'},
+  {name:'Livents Studios', link:'/livents-studios'}
 ]
 
 const OrganizationDesc = () => {

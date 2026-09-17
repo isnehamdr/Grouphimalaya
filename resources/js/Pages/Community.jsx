@@ -468,7 +468,7 @@ const Community = () => {
             <div className='flex items-center gap-3 mt-6 sm:mt-8'>
               <div className='w-8 h-[2px] bg-white/50 rounded-full' />
               <div>
-                <p className='text-white font-semibold text-base sm:text-lg tracking-wide'>Mr. Dhurba Bahadur Thapa</p>
+                <p className='text-white font-semibold text-base sm:text-lg tracking-wide'>Mr. Dhruba Thapa</p>
                 <p className='text-white/70 text-xs sm:text-sm tracking-widest uppercase'>Founder & Chairman, Himalaya Organization</p>
               </div>
             </div>

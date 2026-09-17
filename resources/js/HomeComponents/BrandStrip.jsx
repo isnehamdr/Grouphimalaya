@@ -92,7 +92,7 @@ import React, { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 
 import forcelogo from '../../../public/images/force_motors_logo.png'
-import maxuslogo from '../../../public/images/maxus_logo.png'
+import maxuslogo from '../../../public/images/maxus_black.png'
 import fordlogo from '../../../public/images/ford_logo.png'
 import mountainglorylogo from '../../../public/images/mountain_glory_logo.png'
 import logo1 from '../../../public/images/2logo.png'
@@ -102,8 +102,8 @@ const brands = [
   forcelogo,
   maxuslogo,
   fordlogo,
-  mountainglorylogo,
   logo1,
+  mountainglorylogo,
   kal,
 ]
 
@@ -201,24 +201,24 @@ const BrandStrip = () => {
             {loopedBrands.map((brand, index) => (
               <div
                 key={index}
-                className="
+                className={`
                   relative
                   h-28
                   w-36 sm:w-44 lg:w-52
                   flex-shrink-0
                   rounded-xl
                   flex items-center justify-center
-                  bg-white/5
+                  ${(brand===maxuslogo || brand===mountainglorylogo ) ? 'bg-white hover:bg-white/90' : 'bg-white/5 hover:bg-white/10'}
                   backdrop-blur-lg
                   border border-white/10
                   shadow-[0_6px_24px_rgba(0,0,0,0.35)]
                   transition-all duration-300
-                  hover:bg-white/10
+                  
                   hover:border-white/20
                   hover:-translate-y-1
                   hover:shadow-[0_10px_32px_rgba(0,0,0,0.55)]
                   cursor-pointer
-                "
+                `}
               >
                 {/* Glass reflection */}
                 <div className="pointer-events-none absolute inset-0 rounded-xl bg-gradient-to-b from-white/10 to-transparent opacity-40" />

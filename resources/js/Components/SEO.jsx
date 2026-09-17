@@ -6,7 +6,7 @@ export default function SEO({
     url,
     image = "/images/logo.png",
 }) {
-    const fullTitle = title ? `${title} | Group Himalaya` : "Group Himalaya";
+    const fullTitle = title ? `${title}` : "Group Himalaya";
 
     return (
         <Head>

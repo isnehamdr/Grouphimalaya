@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import founderimage from '../../../public/images/message.jpg'
+import founderimage from '../../../public/images/chairman_new.jpeg'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -161,7 +161,7 @@ const HowItStarted = () => {
             ref={imageRef}
             src={founderimage}
             alt="Founder Mr. Dhruba Thapa"
-            className="w-full h-[320px] sm:h-[400px] lg:h-[500px] object-cover object-center"
+            className="w-full h-[320px] sm:h-[400px] lg:h-[500px] object-cover object-top"
           />
           {/* Caption bar */}
           <div className="bg-gray-900 px-5 py-3 flex items-center justify-between">

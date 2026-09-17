@@ -26,6 +26,7 @@ import seed from '../../../public/images/seed.png'
 import mechanical from '../../../public/images/mechanical.png'
 import advisory from '../../../public/images/advisory.png'
 import { router } from '@inertiajs/react'
+import liventsimage from '../../../public/images/livents_logo.jpeg'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -271,7 +272,7 @@ const Business = () => {
     {
       image: housingimage,
       reversed: true,
-      heading: 'Sustainable Spaces for Modern Nepal.',
+      heading: 'Sustainable Housing Spaces for Modern Nepal.',
       body: "Our real estate arm develops sustainable residential and commercial projects that enhance urban living and investment potential across Nepal's key cities — with transparency and long-term value at the core.",
       features: [
         { icon: community, title: 'Adaptive Living', desc: 'Planned and tested projects, tailored to local lifestyles and community needs.' },
@@ -323,6 +324,36 @@ const Business = () => {
       ],
       link:'/engineering'
     },
+    // {
+    //   image: liventsimage, 
+    //   reversed:false,
+    //     heading: 'Complex Projects, Expert Solutions.',
+    //   body: "Leveraging our cross-sector infrastructure expertise, Himalaya Organization's engineering division tackles complex projects from inception to completion with highly skilled teams and modern equipment.",
+    //   features: [
+    //     { icon: community, title: 'Civil Works', desc: 'Comprehensive construction and infrastructure solutions built to last.' },
+    //     { icon: supporticon, title: 'Technical Services', desc: 'Expert mechanical and electrical engineering for high-demand facilities.' },
+    //   ],
+    //   link:'/livents-studios'
+    // }
+    {
+  image: liventsimage, 
+  reversed: false,
+  heading: 'Elevating Production Standards.',
+  body: "As Nepal's first dedicated vanity service provider, Livents Studios offers premium on-location support for the film and media industry, providing artists and crews with a sophisticated, fully-equipped space to perform at their best.",
+  features: [
+    { 
+      icon: community, 
+      title: 'Premium Vanity Vans', 
+      desc: 'Modern interiors with makeup stations and rest areas designed for maximum comfort on set.' 
+    },
+    { 
+      icon: supporticon, 
+      title: 'Production Support', 
+      desc: 'Reliable, professional solutions for film shoots, commercials, and large-scale events.' 
+    },
+  ],
+  link: '/livents-studios'
+}
   ]
 
   const values = [

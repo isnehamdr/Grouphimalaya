@@ -65,6 +65,7 @@ const Footer = () => {
             <p className='text-xs sm:text-sm uppercase tracking-wider text-gray-400 mb-4 font-semibold'>Business Sector</p>
             <ul className='space-y-2 md:space-y-2.5'>
               <li onClick={()=>router.visit('/automobile')} className='text-sm md:text-base cursor-pointer hover:text-amber-600 transition-colors duration-200'>Automobile</li>
+              <li onClick={()=>router.visit('/dongfengyunnan')} className='text-sm md:text-base cursor-pointer hover:text-amber-600 transition-colors duration-200'>Dongfeng Yunnan</li>
               <li onClick={()=>router.visit('/realestate')} className='text-sm md:text-base cursor-pointer hover:text-amber-600 transition-colors duration-200'>Real Estate Housing</li>
               <li onClick={()=>router.visit('/hospitality')} className='text-sm md:text-base cursor-pointer hover:text-amber-600 transition-colors duration-200'>Hospitality</li>
               <li onClick={()=>router.visit('/banking')} className='text-sm md:text-base cursor-pointer hover:text-amber-600 transition-colors duration-200'>Banking</li>
@@ -114,7 +115,7 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className='mt-12 md:mt-16 lg:mt-20'>
         <div className='w-full bg-[#191919] rounded-2xl md:rounded-3xl py-4 px-6 md:px-8 flex flex-col sm:flex-row justify-between items-center gap-4 mb-8'>
-          <img src={logo} alt="Logo" className='w-36 sm:w-40 md:w-44 lg:w-52 object-contain'/>
+          <img src={logo} alt="Logo" className='w-36 sm:w-40 md:w-44 lg:w-54 object-contain'/>
           
           <div className='flex gap-4 md:gap-6'>
             <a href="https://www.facebook.com/himalayaorg/" target='__blank' className='hover:text-amber-600 transition-colors duration-200' aria-label="Facebook">
@@ -145,12 +146,12 @@ const Footer = () => {
         </div>
 
         {/* Copyright Section */}
-        <div className='flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left'>
+        {/* <div className='flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left w-full '>
           <p className='text-xs sm:text-sm text-gray-400 cursor-pointer hover:text-amber-600 transition-colors duration-200'>
             Privacy Policy
           </p>
 
-          <p className="text-xs sm:text-sm text-gray-500">
+          <p className="text-xs sm:text-sm text-gray-500 ">
             © Copyright {new Date().getFullYear()} | Crafted by{' '}
             <a 
               href="https://sait.com.np" 
@@ -165,7 +166,19 @@ const Footer = () => {
           <p className='text-xs sm:text-sm text-gray-400 cursor-pointer hover:text-amber-600 transition-colors duration-200'>
             Terms & Conditions
           </p>
-        </div>
+        </div> */}
+
+        <p className="text-xs sm:text-sm text-center text-gray-500 ">
+            © Copyright {new Date().getFullYear()} | Crafted by{' '}
+            <a 
+              href="https://sait.com.np" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-amber-600 transition-colors duration-200"
+            >
+              S.A.I.T Solution Nepal
+            </a>
+          </p>
       </div>
     </footer>
   );

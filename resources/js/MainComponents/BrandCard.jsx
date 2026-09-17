@@ -304,6 +304,19 @@ const autoBrands = [
     tag_bg: '#0c4a6e',
     isService: false
   },
+   {
+    id: 'dongfeng',
+    tag: 'Commercial EV Buses',
+    name: 'Dongfeng Yunnan',
+    entity: 'Aayam Intercontinental Pvt. Ltd.',
+    website: 'grouphimalaya.com/dongfengyunnan',
+    link: '/dongfengyunnan',
+    description: "Aayam Intercontinental Pvt. Ltd., a member of Himalaya Organization, represents Dongfeng Yunnan's commercial vehicle range in Nepal, including electric city buses, school buses, and luxury travel buses.",
+    accent: '#b08d57',
+    tag_color: '#fff7e8',
+    tag_bg: '#6f542d',
+    isService: false
+  },
   {
     id: 'deepal',
     tag: 'Regional Distribution',
@@ -565,11 +578,11 @@ function BrandSection({ brand, index, imageMap }) {
         <img
           src={imgSrc}
           alt={brand.name}
-          className="w-full h-64 sm:h-80 lg:h-[88vh] rounded-2xl lg:rounded-3xl object-cover"
+          className="w-full h-64 sm:h-80 lg:h-[88vh] rounded-2xl lg:rounded-3xl object-fit"
         />
       ) : (
         <div
-          className="w-full h-64 sm:h-80 lg:h-[82vh] rounded-2xl lg:rounded-3xl flex items-center justify-center text-white/20 text-sm"
+          className="w-full h-64 sm:h-80 lg:h-[82vh]  rounded-2xl lg:rounded-3xl flex items-center justify-center text-white/20 text-sm"
           style={{ background: `${brand.accent}22`, border: `1px solid ${brand.accent}33` }}
         >
           {brand.name} Showroom Image

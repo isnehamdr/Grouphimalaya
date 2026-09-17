@@ -220,7 +220,7 @@ const ChairmanMessage = () => {
 
   // SEO data with consistent leadership and company keywords
   const seoData = {
-    title: "Chairman's Message | Leadership Vision from Mr. Dhurba Bahadur Thapa | Himalaya Organization",
+    title: "Chairman's Message | Leadership Vision from Mr. Dhruba Thapa | Himalaya Organization",
     description: "Read the Chairman's message from Mr. Dhurba Bahadur Thapa, founder of Himalaya Organization. Discover our journey since 1991, commitment to Nepal's economic growth, and vision for excellence in automobile, real estate, and diversified investments.",
     url: "https://www.himalayaorganization.com/chairman-message",
     image: "/images/chairman.jpeg",
@@ -344,7 +344,7 @@ const ChairmanMessage = () => {
                       border-[6px] lg:border-[10px] border-[#f6f3ec] shadow-2xl">
         <img
           src={founderimage}
-          alt="Mr. Dhurba Bahadur Thapa - Founder and Chairman of Himalaya Organization"
+          alt="Mr. Dhruba Thapa - Founder and Chairman of Himalaya Organization"
           className="w-72 sm:w-64 lg:w-80 2xl:w-96 object-cover block"
         />
       </div>
@@ -434,7 +434,7 @@ const ChairmanMessage = () => {
             <div className='attribution flex items-center gap-3 px-1'>
               <div className='attr-line w-8 h-[2px] bg-amber-600 rounded-full' />
               <div className='attr-name flex flex-col'>
-                <p className='text-xl sm:text-2xl font-semibold text-gray-400 tracking-wide'>Mr. Dhurba Bahadur Thapa</p>
+                <p className='text-xl sm:text-2xl font-semibold text-gray-400 tracking-wide'>Mr. Dhruba Thapa</p>
                 <p className='text-sm sm:text-base text-gray-500 tracking-widest uppercase'>Chairman, Himalaya Organization</p>
               </div>
             </div>

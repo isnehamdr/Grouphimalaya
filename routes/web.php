@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminLogController;
 use App\Http\Controllers\CareerController;
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\BlogController;
@@ -12,12 +13,15 @@ use App\Http\Controllers\UserSetupController;
 Route::get('/', fn() => Inertia::render('HomePage'));
 Route::get('/about', fn() => Inertia::render('About'));
 Route::get('/automobile', fn() => Inertia::render('Automobile'));
+Route::get('/dongfengyunnan', fn() => Inertia::render('Dongfeng'));
 Route::get('/realestate', fn() => Inertia::render('RealEstate'));
 Route::get('/hospitality', fn() => Inertia::render('Hospitality'));
 Route::get('/banking', fn() => Inertia::render('Banking'));
 Route::get('/agriculture', fn() => Inertia::render('Agriculture'));
 Route::get('/engineering', fn() => Inertia::render('Engineering'));
 Route::get('/contact', fn() => Inertia::render('Contact'));
+Route::get('/contact/challenge', [ContactController::class, 'challenge'])->name('contact.challenge');
+Route::post('/contact', [ContactController::class, 'store'])->middleware('throttle:5,1')->name('contact.submit');
 Route::get('/organization-history', fn() => Inertia::render('OrganizationHistory'));
 Route::get('/message-from-chairman', fn() => Inertia::render('ChairmanMessage'));
 Route::get('/career', fn() => Inertia::render('Career'));
@@ -25,6 +29,7 @@ Route::get('/community', fn() => Inertia::render('Community'));
 Route::get('/corporate-profile', fn() => Inertia::render('CorporateProfile'));
 Route::get('/company-profile', fn() => Inertia::render('CompanyProfile'));
 Route::get('/force-service', fn() => Inertia::render('ForceService'));
+Route::get('/livents-studios', fn() => Inertia::render('LiventsStudios'));
 
 // ─── BLOG PUBLIC PAGES ───────────────────────────────────────────
 // Blog listing page (renders Inertia Blog.jsx)
