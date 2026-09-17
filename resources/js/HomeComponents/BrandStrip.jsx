@@ -97,6 +97,8 @@ import fordlogo from '../../../public/images/ford_logo.png'
 import mountainglorylogo from '../../../public/images/mountain_glory_logo.png'
 import logo1 from '../../../public/images/2logo.png'
 import kal from '../../../public/images/kal.png'
+import dongfeng from '../../../public/images/DongfengYunnanLogo.png'
+
 
 const brands = [
   forcelogo,
@@ -105,6 +107,7 @@ const brands = [
   logo1,
   mountainglorylogo,
   kal,
+  dongfeng,
 ]
 
 const BrandStrip = () => {
@@ -208,7 +211,7 @@ const BrandStrip = () => {
                   flex-shrink-0
                   rounded-xl
                   flex items-center justify-center
-                  ${(brand===maxuslogo || brand===mountainglorylogo ) ? 'bg-white hover:bg-white/90' : 'bg-white/5 hover:bg-white/10'}
+                  ${(brand===maxuslogo || brand===mountainglorylogo || brand===dongfeng ) ? 'bg-white hover:bg-white/90' : 'bg-white/5 hover:bg-white/10'}
                   backdrop-blur-lg
                   border border-white/10
                   shadow-[0_6px_24px_rgba(0,0,0,0.35)]

@@ -578,7 +578,7 @@ function BrandSection({ brand, index, imageMap }) {
         <img
           src={imgSrc}
           alt={brand.name}
-          className="w-full h-64 sm:h-80 lg:h-[88vh] rounded-2xl lg:rounded-3xl object-fit"
+          className="w-full h-64 sm:h-80 lg:h-[88vh] rounded-2xl lg:rounded-3xl object-cover"
         />
       ) : (
         <div
@@ -644,6 +644,350 @@ function BrandSection({ brand, index, imageMap }) {
     </div>
   )
 }
+
+
+// function BrandSection({ brand, index, imageMap }) {
+//   const sectionRef = useRef(null)
+//   const imageRef = useRef(null)
+//   const contentRef = useRef(null)
+
+//   const reversed = index % 2 !== 0
+//   const imgSrc = imageMap?.[brand.id]
+
+//   /*
+//     Use contain for wide promotional / poster images.
+
+//     Option 1:
+//     Add imageFit: 'contain' to the brand data.
+
+//     Option 2:
+//     Dongfeng automatically uses contain here.
+//   */
+//   const shouldContain =
+//     brand.imageFit === 'contain' ||
+//     brand.id?.toLowerCase() === 'dongfeng'
+
+//   useEffect(() => {
+//     const ctx = gsap.context(() => {
+//       const isMobile = window.innerWidth < 1024
+
+//       // Image animation
+//       gsap.fromTo(
+//         imageRef.current,
+//         {
+//           opacity: 0,
+//           x: isMobile ? 0 : reversed ? 60 : -60,
+//           y: isMobile ? 30 : 0,
+//           scale: 0.97,
+//         },
+//         {
+//           opacity: 1,
+//           x: 0,
+//           y: 0,
+//           scale: 1,
+//           duration: 1,
+//           ease: 'power3.out',
+//           scrollTrigger: {
+//             trigger: sectionRef.current,
+//             start: 'top 82%',
+//             toggleActions: 'play none none reverse',
+//           },
+//         }
+//       )
+
+//       // Main content animation
+//       gsap.fromTo(
+//         contentRef.current,
+//         {
+//           opacity: 0,
+//           x: isMobile ? 0 : reversed ? -60 : 60,
+//           y: isMobile ? 30 : 20,
+//         },
+//         {
+//           opacity: 1,
+//           x: 0,
+//           y: 0,
+//           duration: 1,
+//           delay: 0.15,
+//           ease: 'power3.out',
+//           scrollTrigger: {
+//             trigger: sectionRef.current,
+//             start: 'top 82%',
+//             toggleActions: 'play none none reverse',
+//           },
+//         }
+//       )
+
+//       // Child animations
+//       const children =
+//         contentRef.current?.querySelectorAll('.animate-child')
+
+//       if (children?.length) {
+//         gsap.fromTo(
+//           children,
+//           {
+//             opacity: 0,
+//             y: 24,
+//           },
+//           {
+//             opacity: 1,
+//             y: 0,
+//             duration: 0.7,
+//             stagger: 0.12,
+//             delay: 0.3,
+//             ease: 'power2.out',
+//             scrollTrigger: {
+//               trigger: sectionRef.current,
+//               start: 'top 82%',
+//               toggleActions: 'play none none reverse',
+//             },
+//           }
+//         )
+//       }
+//     }, sectionRef)
+
+//     return () => ctx.revert()
+//   }, [reversed])
+
+//   const imageEl = (
+//     <div
+//       ref={imageRef}
+//       className="
+//         relative
+//         w-full
+//         h-64
+//         sm:h-80
+//         lg:h-[88vh]
+//         rounded-2xl
+//         lg:rounded-3xl
+//         overflow-hidden
+//         bg-neutral-900
+//       "
+//     >
+//       {imgSrc ? (
+//         shouldContain ? (
+//           <>
+//             {/* Background image
+//                 Fills empty space without stretching main image */}
+//             <img
+//               src={imgSrc}
+//               alt=""
+//               aria-hidden="true"
+//               className="
+//                 absolute
+//                 inset-0
+//                 w-full
+//                 h-full
+//                 object-cover
+//                 scale-110
+//                 blur-2xl
+//                 opacity-30
+//               "
+//             />
+
+//             {/* Dark layer over blurred background */}
+//             <div className="absolute inset-0 bg-black/20" />
+
+//             {/* Actual image */}
+//             <img
+//               src={imgSrc}
+//               alt={brand.name}
+//               className="
+//                 relative
+//                 z-10
+//                 w-full
+//                 h-full
+//                 object-contain
+//               "
+//             />
+//           </>
+//         ) : (
+//           // Normal showroom / photographic images
+//           <img
+//             src={imgSrc}
+//             alt={brand.name}
+//             className="
+//               w-full
+//               h-full
+//               object-cover
+//             "
+//           />
+//         )
+//       ) : (
+//         <div
+//           className="
+//             w-full
+//             h-full
+//             flex
+//             items-center
+//             justify-center
+//             text-white/20
+//             text-sm
+//           "
+//           style={{
+//             background: `${brand.accent}22`,
+//             border: `1px solid ${brand.accent}33`,
+//           }}
+//         >
+//           {brand.name} Showroom Image
+//         </div>
+//       )}
+//     </div>
+//   )
+
+//   const contentEl = (
+//     <div
+//       ref={contentRef}
+//       className="
+//         py-4
+//         lg:py-6
+//         flex
+//         flex-col
+//         justify-center
+//         gap-8
+//         lg:gap-0
+//       "
+//     >
+//       <div className="flex flex-col gap-5">
+
+//         {/* Tag */}
+//         <span
+//           className="
+//             animate-child
+//             inline-block
+//             self-start
+//             text-xs
+//             font-semibold
+//             uppercase
+//             tracking-widest
+//             px-3
+//             py-1
+//             rounded-full
+//           "
+//           style={{
+//             color: brand.tag_color,
+//             backgroundColor: brand.tag_bg,
+//           }}
+//         >
+//           {brand.tag}
+//         </span>
+
+//         {/* Brand name */}
+//         <p
+//           className="
+//             animate-child
+//             text-3xl
+//             sm:text-4xl
+//             lg:text-5xl
+//             leading-snug
+//             text-white
+//           "
+//         >
+//           {brand.name}
+//         </p>
+
+//         {/* Operator */}
+//         <div className="animate-child">
+//           <p
+//             className="
+//               text-xs
+//               uppercase
+//               tracking-widest
+//               text-white/40
+//               mb-0.5
+//             "
+//           >
+//             Operated by
+//           </p>
+
+//           <p
+//             className="
+//               text-sm
+//               sm:text-base
+//               font-medium
+//               text-white/80
+//             "
+//           >
+//             {brand.entity}
+//           </p>
+//         </div>
+
+//         {/* Accent divider */}
+//         <div
+//           className="
+//             animate-child
+//             w-12
+//             h-0.5
+//             rounded-full
+//           "
+//           style={{
+//             backgroundColor: brand.accent,
+//           }}
+//         />
+
+//         {/* Description */}
+//         <p
+//           className="
+//             animate-child
+//             text-base
+//             lg:text-lg
+//             text-white/70
+//             leading-relaxed
+//             max-w-xl
+//           "
+//         >
+//           {brand.description}
+//         </p>
+
+//       </div>
+//     </div>
+//   )
+
+//   return (
+//     <div
+//       ref={sectionRef}
+//       className="
+//         overflow-hidden
+//         grid
+//         grid-cols-1
+//         lg:grid-cols-2
+//         gap-8
+//         sm:gap-12
+//         lg:gap-20
+//         items-center
+//       "
+//     >
+//       {reversed ? (
+//         <>
+//           {/* Mobile */}
+//           <div className="lg:hidden">
+//             {imageEl}
+//           </div>
+
+//           {/* Desktop content first */}
+//           <div className="hidden lg:block">
+//             {contentEl}
+//           </div>
+
+//           {/* Desktop image second */}
+//           <div className="hidden lg:block">
+//             {imageEl}
+//           </div>
+
+//           {/* Mobile content */}
+//           <div className="lg:hidden">
+//             {contentEl}
+//           </div>
+//         </>
+//       ) : (
+//         <>
+//           {imageEl}
+//           {contentEl}
+//         </>
+//       )}
+//     </div>
+//   )
+// }
 
 // ─── Section Header ─────────────────────────────────────────────────────────────
 
