@@ -10,12 +10,20 @@ import csrJci         from '../../../public/images/csr3.jpg'
 import csrCovid       from '../../../public/images/csr2.jpg'
 import csrKeyHandover from '../../../public/images/csr4.jpg'
 import csrAmbulance   from '../../../public/images/csr5.jpg'
-
+import csrDisasterRelief from '../../../public/images/csr6.png'
 gsap.registerPlugin(ScrollTrigger)
 
 const csrInitiatives = [
+{
+  id: 1,
+  label: 'Disaster Relief 2026',
+  title: 'NPR 8 Million Relief Support for Disaster-Affected Communities',
+  description:
+    'MAXUS Nepal, with SAIC MAXUS China and in coordination with Himalaya Organization, provided ~NPR 8 million in relief. This included NPR 5 million to the Prime Minister’s Disaster Relief Fund and ~NPR 3 million in direct support across the Trishuli River — installing solar-powered ultra-filtration water plants (1,000 L/hr each) at two temporary shelters and distributing essential relief materials for ~400 people. The relief distribution and installation of clean drinking-water systems were carried out with the direct involvement of Himalaya Organization Chairman Mr. Dhruba Thapa, Managing Director Mrs. Milan Thapa, employees of Himalaya Organization, as well as Lions International District 325 J Nepal Chief Governor Mr. Ram Raja Thapa and other district officials.',
+  images: [csrDisasterRelief],
+},
   {
-    id: 1,
+    id: 2,
     label: 'Emergency Response',
     title: 'Three Units Force Ambulance Donation to Lions Club of Pokhara & Beni',
     description:
@@ -23,7 +31,7 @@ const csrInitiatives = [
     images: [csrLionsClub, csrKeyHandover],
   },
   {
-    id: 2,
+    id: 3,
     label: 'Covid-19 Relief',
     title: 'Three Units Force Ambulance Donation to Pokhara Metropolitan City',
     description:
@@ -31,7 +39,7 @@ const csrInitiatives = [
     images: [csrCovid, csrAmbulance],
   },
   {
-    id: 3,
+    id: 4,
     label: 'Community Partnership',
     title: 'One Unit Force Ambulance Donation to JCI Pokhara',
     description:
@@ -41,9 +49,10 @@ const csrInitiatives = [
 ]
 
 const impactStats = [
-  { value: '7+',  label: 'Ambulances Donated'   },
-  { value: '3+',  label: 'Partner Organizations' },
-  { value: '30+', label: 'Years of Giving Back'  },
+  { value: '7+',     label: 'Ambulances Donated'    },
+  { value: '3+',     label: 'Partner Organizations'  },
+  { value: 'NPR 8M', label: 'Disaster Relief Support' },
+  { value: '30+',    label: 'Years of Giving Back'   },
 ]
 
 // ── Lightbox ───────────────────────────────────────────────────────────────────
@@ -345,14 +354,14 @@ const Community = () => {
         </div>
 
         {/* ── Impact Stats ──────────────────────────────────────────── */}
-        <div className='grid grid-cols-3 gap-2 sm:gap-6 px-4 sm:px-10 lg:px-20 mb-10 sm:mb-20'>
+       <div className='grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-6 px-4 sm:px-10 lg:px-20 mb-10 sm:mb-20'>
           {impactStats.map((stat, i) => (
             <div
               key={i}
               ref={el => (statsRef.current[i] = el)}
               className='rounded-2xl bg-[#121318] p-4 sm:p-8 flex flex-col items-center justify-center text-center opacity-0'
             >
-              <p className='text-xl sm:text-4xl lg:text-6xl font-semibold text-amber-700'>{stat.value}</p>
+              <p className='text-lg sm:text-3xl lg:text-5xl font-semibold text-amber-700'>{stat.value}</p>
               <p className='text-[10px] sm:text-sm lg:text-base text-gray-500 mt-1 sm:mt-2 leading-tight'>{stat.label}</p>
             </div>
           ))}

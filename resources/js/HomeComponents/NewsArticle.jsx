@@ -4,15 +4,26 @@ import newsimagetwo from '../../../public/images/news_two_image.jpeg'
 import newsimagethree from '../../../public/images/news_three_image.jpeg'
 import newsimagefour from '../../../public/images/news_four_image.jpg'
 import newsimagefive from '../../../public/images/news_five_image.jpg'
+import newsimagesix from '../../../public/images/newsimagesix.jpg'
 
 
-const News = [{
+const News = [
+{
+  id: 6,
+  title: 'हिमालय अर्गनाइजेसन र गोर्खाज फाइनान्सबीच सम्झौता, विद्युतीय सवारी खरिदमा ८० प्रतिशतसम्म कर्जा',
+  description: 'काठमाडौं । हिमालय अर्गनाइजेसन र गोर्खाज फाइनान्स लिमिटेडबीच कमर्सियल तथा विद्युतीय सवारी साधन खरिदका लागि ८० प्रतिशतसम्म कर्जा उपलब्ध गराउने सम्झौता भएको छ । सम्झौतासँगै देशभरका ग्राहकले हिमालय अर्गनाइजेसनबाट बिक्री–वितरण हुने सबै कमर्सियल तथा विद्युतीय सवारी साधन खरिद गर्दा ८० प्रतिशतसम्म सहज फाइनान्सिङ सुविधा लिन सक्नेछन् ।',
+  link: 'https://bikashnews.com/story/576455/',
+  image: newsimagesix
+},
+
+  {
 id:1, 
 title:"हिमालय मोट्रक्सले सार्वजनिक गऱ्यो 'म्याक्सस इटेरोन ९ कम्फर्ट'", 
 description:'नेपालका लागि म्याक्सस सवारीसाधनको आधिकारिक आयातकर्ता तथा वितरक हिमालय मोट्रक्स प्रा.लि.ले नयाँ शक्तिशाली र प्रिमियम विद्युतीय फोर–ह्विल ड्राइभ पिकअप म्याक्सस इटेरोन ९ कम्फर्ट नेपाली बजारमा सार्वजनिक गरेको छ।',
 link: 'https://www.setopati.com/kinmel/automobiles/394313', 
 image: newsimageone
 },
+
 {
 id:2, 
 title:'हिमालय मोट्रक्सद्वारा MAXUS eTERRON 9 Comfort नेपालमा सार्वजनिक, पहिलो ५० जना ग्राहकका लागि विशेष मूल्य रु. ८८ लाख', 
