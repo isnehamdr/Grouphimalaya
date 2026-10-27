@@ -17,6 +17,14 @@ const News = [
   link: 'https://www.facebook.com/nepalauto1/posts/pfbid05wY1aABwpZaJGhpqoka7isGpKwcK2b66avTJnzPsvQkUZtybSdfv25KP816fH2jQl?rdid=dYp0j2yKoJjRaXyt#',
   image: newsimagesix,
 },
+{
+    id: 5,
+    title: 'इलेक्टिक फोर–ह्विल ड्राइभ पिकअप ‘म्याक्सस इ–टेरोन ९ कम्फर्ट’ सार्वजनिक',
+    description:
+      'चीनको एसएआईसी ग्रुप अन्तर्गतको म्याक्सस ब्राण्डका सवारी साधनको नेपालका लागि आधिकारिक आयातकर्ता तथा वितरक हिमालय अर्गनाइजेसन अन्तर्गतको हिमालय मोट्रक्स प्रा.लि.ले नयाँ शक्तिशाली इलेक्टिक फोर–ह्विल ड्राइभ पिकअप ‘म्याक्सस इ–टेरोन ९ कम्फर्ट’ नेपाली बजारमा सार्वजनिक गरेको छ ।',
+    link: 'https://arthikawaj.com/maxus-2/',
+    image: newsimagefive,
+  },
   {
     id: 6,
     title: 'हिमालय अर्गनाइजेसन र गोर्खाज फाइनान्सबीच सम्झौता, विद्युतीय सवारी खरिदमा ८० प्रतिशतसम्म कर्जा',
@@ -26,12 +34,28 @@ const News = [
     image: newsimagesix,
   },
   {
+    id: 1,
+    title: "हिमालय मोट्रक्सले सार्वजनिक गऱ्यो 'म्याक्सस इटेरोन ९ कम्फर्ट'",
+    description:
+      'नेपालका लागि म्याक्सस सवारीसाधनको आधिकारिक आयातकर्ता तथा वितरक हिमालय मोट्रक्स प्रा.लि.ले नयाँ शक्तिशाली र प्रिमियम विद्युतीय फोर–ह्विल ड्राइभ पिकअप म्याक्सस इटेरोन ९ कम्फर्ट नेपाली बजारमा सार्वजनिक गरेको छ।',
+    link: 'https://www.setopati.com/kinmel/automobiles/394313',
+    image: newsimageone,
+  },
+  {
     id: 7,
     title: 'हिमालय अर्गनाइजेसन र गोर्खाज फाइनान्सबीच ८०% सम्म सवारी कर्जा उपलब्ध गराउने सम्झौता',
     description:
       'काठमाडौं । नेपालमा वातावरणमैत्री, आधुनिक र दिगो यातायात सेवालाई प्रवर्द्धन गर्ने उद्देश्यका साथ हिमालय अर्गनाइजेसन र गोर्खाज फाइनान्स लिमिटेडबीच समझदारी पत्रमा हस्ताक्षर भएको छ । अब देशभरिका ग्राहकहरूले कमर्सियल तथा विद्युतीय सवारी खरिदमा ८० प्रतिशतसम्म सहज फाइनान्सिङ सुविधा पाउनेछन् ।',
     link: 'https://arthikawaj.com/himalaya-organization-gorkhas-finance-sign-mou-for-up-to-80-vehicle-financing/',
     image: newsimagesix,
+  },
+   {
+    id: 4,
+    title: 'हिमालय मोट्रक्स‌द्वारा विद्युतीय पिकअप ‘म्याक्सस इटेरोन–९ कम्फर्ट’ सार्वजनिक',
+    description:
+      'हिमालय अर्गनाइजेसन अन्तर्गतको हिमालय मोट्रक्स प्रालिले म्याक्सस ब्रान्डको नयाँ विद्युतीय चार पाङ्ग्रे पिकअप ‘म्याक्सस इटेरोन–९ कम्फर्ट’ नेपाली बजारमा सार्वजनिक गरेको छ। कम्पनीले पहिलो ५० जना ग्राहकका लागि यसको प्रारम्भिक बिक्री मूल्य ८८ लाख रुपैयाँ कायम गरेको जनाएको छ।',
+    link: 'https://www.makalukhabar.com/2026/07/99977617953/',
+    image: newsimagefour,
   },
   {
     id: 8,
@@ -42,12 +66,30 @@ const News = [
     image: newsimagesix,
   },
   {
+    id: 2,
+    title:
+      'हिमालय मोट्रक्सद्वारा MAXUS eTERRON 9 Comfort नेपालमा सार्वजनिक, पहिलो ५० जना ग्राहकका लागि विशेष मूल्य रु. ८८ लाख',
+    description:
+      'नेपालका लागि MAXUS सवारी साधनकाे आधिकारिक आयातकर्ता तथा वितरक हिमालय अर्गनाइजेसन अन्तर्गतको कम्पनी हिमालय मोट्रक्स प्रा.लि. ले नयाँ शक्तिशाली र प्रिमियम इलैक्ट्रिक फोर-हिवल ड्राइभ पिकअप MAXUS TERRON 9 Comfort नेपाली बजारमा सार्वजनिक गरेको छ।',
+    link: 'https://arthapranali.com/2026/07/32031/',
+    image: newsimagetwo,
+  },
+  {
     id: 9,
     title: 'हिमालय अर्गनाइजेसन र गोर्खाज फाइनान्सबीच सम्झौता, सवारी कर्जाको अवधि ७ वर्षसम्म',
     description:
       'हिमालय अर्गनाइजेसनबाट बिक्री हुने कमर्सियल तथा विद्युतीय सवारी खरिदमा गोर्खाज फाइनान्सले ८० प्रतिशतसम्म कर्जा उपलब्ध गराउने सम्झौता भएको छ । कर्जाको भुक्तानी अवधि अधिकतम सात वर्षसम्म रहने र ३ देखि ५ कार्यदिनभित्र कर्जा स्वीकृत हुने व्यवस्था मिलाइएको छ ।',
     link: 'https://bizpati.com/2026/09/220635/',
     image: newsimagesix,
+  },
+    {
+    id: 3,
+    title:
+      'Himalaya Motrox Launches MAXUS eTERRON 9 Comfort in Nepal at an Introductory Price of NPR 88 Lakh',
+    description:
+      'Himalaya Motrox Pvt. Ltd., the authorized importer and distributor of MAXUS vehicles in Nepal, has officially launched the new MAXUS eTERRON 9 Comfort-a powerful, premium, all-electric 4WD pickup truck.',
+    link: 'https://arthapranali.com/2026/07/32036/',
+    image: newsimagethree,
   },
   {
     id: 10,
@@ -121,48 +163,11 @@ const News = [
     link: 'https://hamrodes.com/archives/353287',
     image: newsimagesix,
   },
-  {
-    id: 1,
-    title: "हिमालय मोट्रक्सले सार्वजनिक गऱ्यो 'म्याक्सस इटेरोन ९ कम्फर्ट'",
-    description:
-      'नेपालका लागि म्याक्सस सवारीसाधनको आधिकारिक आयातकर्ता तथा वितरक हिमालय मोट्रक्स प्रा.लि.ले नयाँ शक्तिशाली र प्रिमियम विद्युतीय फोर–ह्विल ड्राइभ पिकअप म्याक्सस इटेरोन ९ कम्फर्ट नेपाली बजारमा सार्वजनिक गरेको छ।',
-    link: 'https://www.setopati.com/kinmel/automobiles/394313',
-    image: newsimageone,
-  },
-  {
-    id: 2,
-    title:
-      'हिमालय मोट्रक्सद्वारा MAXUS eTERRON 9 Comfort नेपालमा सार्वजनिक, पहिलो ५० जना ग्राहकका लागि विशेष मूल्य रु. ८८ लाख',
-    description:
-      'नेपालका लागि MAXUS सवारी साधनकाे आधिकारिक आयातकर्ता तथा वितरक हिमालय अर्गनाइजेसन अन्तर्गतको कम्पनी हिमालय मोट्रक्स प्रा.लि. ले नयाँ शक्तिशाली र प्रिमियम इलैक्ट्रिक फोर-हिवल ड्राइभ पिकअप MAXUS TERRON 9 Comfort नेपाली बजारमा सार्वजनिक गरेको छ।',
-    link: 'https://arthapranali.com/2026/07/32031/',
-    image: newsimagetwo,
-  },
-  {
-    id: 3,
-    title:
-      'Himalaya Motrox Launches MAXUS eTERRON 9 Comfort in Nepal at an Introductory Price of NPR 88 Lakh',
-    description:
-      'Himalaya Motrox Pvt. Ltd., the authorized importer and distributor of MAXUS vehicles in Nepal, has officially launched the new MAXUS eTERRON 9 Comfort-a powerful, premium, all-electric 4WD pickup truck.',
-    link: 'https://arthapranali.com/2026/07/32036/',
-    image: newsimagethree,
-  },
-  {
-    id: 4,
-    title: 'हिमालय मोट्रक्स‌द्वारा विद्युतीय पिकअप ‘म्याक्सस इटेरोन–९ कम्फर्ट’ सार्वजनिक',
-    description:
-      'हिमालय अर्गनाइजेसन अन्तर्गतको हिमालय मोट्रक्स प्रालिले म्याक्सस ब्रान्डको नयाँ विद्युतीय चार पाङ्ग्रे पिकअप ‘म्याक्सस इटेरोन–९ कम्फर्ट’ नेपाली बजारमा सार्वजनिक गरेको छ। कम्पनीले पहिलो ५० जना ग्राहकका लागि यसको प्रारम्भिक बिक्री मूल्य ८८ लाख रुपैयाँ कायम गरेको जनाएको छ।',
-    link: 'https://www.makalukhabar.com/2026/07/99977617953/',
-    image: newsimagefour,
-  },
-  {
-    id: 5,
-    title: 'इलेक्टिक फोर–ह्विल ड्राइभ पिकअप ‘म्याक्सस इ–टेरोन ९ कम्फर्ट’ सार्वजनिक',
-    description:
-      'चीनको एसएआईसी ग्रुप अन्तर्गतको म्याक्सस ब्राण्डका सवारी साधनको नेपालका लागि आधिकारिक आयातकर्ता तथा वितरक हिमालय अर्गनाइजेसन अन्तर्गतको हिमालय मोट्रक्स प्रा.लि.ले नयाँ शक्तिशाली इलेक्टिक फोर–ह्विल ड्राइभ पिकअप ‘म्याक्सस इ–टेरोन ९ कम्फर्ट’ नेपाली बजारमा सार्वजनिक गरेको छ ।',
-    link: 'https://arthikawaj.com/maxus-2/',
-    image: newsimagefive,
-  },
+  
+  
+
+ 
+  
 ]
 
 
